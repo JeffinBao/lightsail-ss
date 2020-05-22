@@ -64,6 +64,10 @@ Overall, Terraform's support for AWS Lightsail is not comprehensive. For example
 - Run `terraform apply` and wait for the command promt, then type `yes`. Then, wait for the automation process finishes. In the end, a public ip will be printed in the terminal. You can use that ip to configure ShadowsocksX-NG client. 
 - If later you want to destroy the instance, run `terraform destroy`. Terraform will take care of the state and destroy the resources for you.
 
+## Reference
+
+- [Tutorial](https://gist.github.com/nuhuo08/01cb865f77967a2ce14841d6d7fc1f02)
+
 
 
 
