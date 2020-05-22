@@ -59,7 +59,9 @@ Overall, Terraform's support for AWS Lightsail is not comprehensive. For example
 - Download your ssh default private key from Lightsail page under you `Account/SSH keys`. If you don't find your ssh key, maybe you need to manually create an instance for the first time. After you download your private key, it's better to put into `~/.ssh` folder.
 
 - `git clone` my repository
+- Change the `password` in `ansible-playbook/config.json` to your own password.
 - `cd` into `lightsail-ss/terraform` folder
+- Modify `terraform.tfvars` file according to your own AWS account information.
 - Run `terraform init` to initialize terraform
 - Run `terraform apply` and wait for the command promt, then type `yes`. Then, wait for the automation process finishes. In the end, a public ip will be printed in the terminal. You can use that ip to configure ShadowsocksX-NG client. 
 - If later you want to destroy the instance, run `terraform destroy`. Terraform will take care of the state and destroy the resources for you.
