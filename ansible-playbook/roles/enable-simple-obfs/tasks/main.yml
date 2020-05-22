@@ -1,0 +1,22 @@
+---
+- include_role:
+    name: apt-install
+  loop: "{{ pkg_info }}"
+- name: clone simple obfs
+  git:
+    repo: 'https://github.com/shadowsocks/simple-obfs.git'
+    dest: ./simple-obfs
+    force: yes
+- name: go to simple-obfs directory
+  shell: cd ./simple-obfs && git submodule update --init --recursive && ./autogen.sh && ./configure && make
+- name: make install
+  become: yes
+  make:
+    chdir: ./simple-obfs
+    target: install
+- name: make obfs-server able to listen on port 443
+  become: yes
+  capabilities:
+    path: /usr/local/bin/obfs-server
+    capability: cap_net_bind_service+ep
+    state: present

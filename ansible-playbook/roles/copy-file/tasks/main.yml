@@ -1,0 +1,7 @@
+---
+- name: copy {{ src }} to remote {{ dest }}
+  become: yes
+  copy:
+    src: "{{ src }}"
+    dest: "{{ dest }}"
+    force: yes

@@ -1,0 +1,6 @@
+---
+- name: install {{ item.name }}
+  become: yes
+  apt:
+    name: "{{ item.name }}"
+    state: present

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+    - role: install-ss-libev
+    - role: enable-simple-obfs
+    - { role: copy-file, src: ./config.json, dest: /etc/shadowsocks-libev/config.json }
+    - role: start-ss-libev
+      

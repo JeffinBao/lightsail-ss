@@ -1,0 +1,7 @@
+[aws_lightsail]
+18.178.99.237
+
+[aws_lightsail:vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/LightsailDefaultKey-ap-northeast-1.pem
+ansible_ssh_extra_args='-o StrictHostKeyChecking=no'

@@ -1,0 +1,17 @@
+---
+- include_role:
+    name: apt-install
+  loop:
+    - { name: software-properties-common }
+- name: download ss libev
+  become: yes
+  apt_repository:
+    repo: ppa:max-c-lv/shadowsocks-libev
+- name: update
+  become: yes
+  apt:
+    update_cache: yes
+- include_role:
+    name: apt-install
+  loop: 
+    - { name: shadowsocks-libev }

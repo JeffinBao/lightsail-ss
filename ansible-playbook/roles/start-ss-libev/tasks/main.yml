@@ -1,0 +1,11 @@
+---
+- name: enable ss-libev service
+  become: yes
+  systemd: 
+    name: shadowsocks-libev.service
+    enabled: yes
+- name: start ss-libev service
+  become: yes
+  systemd:
+    name: shadowsocks-libev.service
+    state: started

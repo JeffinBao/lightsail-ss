@@ -1,0 +1,11 @@
+---
+pkg_info:
+  - name: build-essential
+  - name: autoconf
+  - name: libtool
+  - name: libssl-dev
+  - name: libpcre3-dev
+  - name: libev-dev
+  - name: asciidoc
+  - name: xmlto
+  - name: automake
