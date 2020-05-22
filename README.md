@@ -2,6 +2,8 @@
 
 ## Diagram
 
+![Diagram](https://raw.githubusercontent.com/JeffinBao/lightsail-ss/master/diagram/pic/lightsail_ss.png)
+
 ## How Does It Work
 
 ### Shadowsocks
