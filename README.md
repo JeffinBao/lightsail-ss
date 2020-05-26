@@ -35,6 +35,7 @@ The provision configuration can be found in `ansible-playbook/main.yml`, it incl
 - `install-ss-libev` -- this role is to download and install [Shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev). This is a lightweight server application.
 - `enable-simple-obfs` -- this role is to download and enable [simple obfs](https://github.com/shadowsocks/simple-obfs), which is a tool to obfuscate internet traffic, so that your traffic looks normal as others.
 -  `copy-file` -- this role is to upload your local config file to your remote instance. In the `ansible-playbook/config.json`, you can find all basic configuration required for Shadowsocks proxy server. **Note**: you need to change the password in the `config.json`, so that you don't use my default password `jeffinbao`.
+- `start-ss-libev` -- this role is to start Shadowsocks-libev service.
 
 ## A Few Gotchas
 
