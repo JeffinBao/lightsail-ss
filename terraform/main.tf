@@ -24,17 +24,17 @@ resource "aws_lightsail_static_ip_attachment" "shadowsocks" {
 resource "aws_lightsail_instance" "shadowsocks" {
   name              = "shadowsocks_instance"
   availability_zone = "ap-northeast-1a"
-  blueprint_id      = "ubuntu_16_04_2"
-  bundle_id         = "nano_2_0"
+  blueprint_id      = "ubuntu_18_04"
+  bundle_id         = "micro_3_0"
 
   connection {
-    host = "${self.public_ip_address}"
-    type = "ssh"
-    user = "ubuntu"
+    host        = "${self.public_ip_address}"
+    type        = "ssh"
+    user        = "ubuntu"
     private_key = "${file(var.private_key_path)}"
   }
   provisioner "remote-exec" {
-      inline = ["echo 'hello world'"]
+    inline = ["echo 'hello world'"]
   }
 
   provisioner "local-exec" {
